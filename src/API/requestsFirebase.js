@@ -42,7 +42,6 @@ export const fetchData = async (id, dispatch) => {
             preferences: user.preferences,
             country: user.country,
         }))
-        console.log(user);
     } else {
         console.log("No such document!");
     }

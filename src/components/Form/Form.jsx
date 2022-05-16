@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Grid, TextField} from "@mui/material";
 import Button from "@mui/material/Button";
 import {useDispatch} from "react-redux";
+import {FormStyles} from "./FormStyles";
 
 const Form = ({title, handleClick}) => {
     const [email, setEmail] = useState('')
@@ -10,10 +11,10 @@ const Form = ({title, handleClick}) => {
     const dispatch = useDispatch()
 
     const validEmail = (e) => {
-        const {target: { value}} = e
+        const {target: {value}} = e
         setErrors({email: ''})
         setEmail(e.target.value)
-        let reg = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(value)
+        let reg = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(value)
         if (!reg) {
             setErrors({email: 'Not an email'})
         }
@@ -31,22 +32,28 @@ const Form = ({title, handleClick}) => {
         <Grid container spacing={1.5}>
             <Grid item xs={12}>
                 <TextField label="email"
-                           color="secondary"
+                           color="neutral"
                            error={Boolean(errors?.email)}
                            helperText={(errors?.email)}
                            focused
                            value={email}
                            onChange={validEmail}
-                           type='email'/>
+                           type='email'
+                           sx={FormStyles}
+                           autoComplete={false}
+                />
             </Grid>
             <Grid item xs={12}>
                 <TextField label="password"
-                           color="secondary"
+                           color="neutral"
                            error={Boolean(errors?.pass)}
                            helperText={(errors?.pass)}
+                           focused
                            value={pass}
                            onChange={validPassword}
-                           type='password'/>
+                           type='password'
+                           sx={FormStyles}
+                           autoComplete={false}/>
             </Grid>
             <Grid item xs>
                 <Button color="secondary" variant='contained'

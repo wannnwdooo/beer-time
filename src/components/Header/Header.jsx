@@ -7,12 +7,13 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import {Link} from "react-router-dom";
 import Box from "@mui/material/Box";
-import {HOME_ROUTE, LOGIN_ROUTE, PROFILE_ROUTE, REGISTER_ROUTE, SETTINGS_ROUTE} from "../../utils/consts";
+import {HOME_ROUTE, LIST_ROUTE, LOGIN_ROUTE, PROFILE_ROUTE, REGISTER_ROUTE, SETTINGS_ROUTE} from "../../utils/consts";
 import {getAuth} from "firebase/auth";
 import {useAuthState} from "react-firebase-hooks/auth";
 import {useDispatch, useSelector} from "react-redux";
 import {removeUser} from "../../store/slices/userSlices";
 import HomeIcon from '@mui/icons-material/Home';
+import SportsBarIcon from '@mui/icons-material/SportsBar';
 
 const Header = () => {
     const dispatch = useDispatch()
@@ -40,7 +41,7 @@ const Header = () => {
 
     return (
         <Box sx={{flexGrow: 1}}>
-            <AppBar position="static">
+            <AppBar position="absolute">
                 <Container maxWidth="xl">
                     <Toolbar>
                         <IconButton
@@ -48,10 +49,20 @@ const Header = () => {
                             edge="start"
                             color="inherit"
                             aria-label="menu"
-                            sx={{mr: 2}}
+                            sx={{mr: 1}}
                             component={Link} to={HOME_ROUTE}
                         >
                             <HomeIcon/>
+                        </IconButton>
+                        <IconButton
+                            size="large"
+                            edge="start"
+                            color="inherit"
+                            aria-label="menu"
+                            sx={{mr: 1}}
+                            component={Link} to={LIST_ROUTE}
+                        >
+                            <SportsBarIcon/>
                         </IconButton>
                         <Typography variant="h6" component="div" sx={{flexGrow: 1}}/>
 
@@ -82,10 +93,10 @@ const Header = () => {
                                     <MenuItem disabled>
                                         <Typography textAlign="center">{email}</Typography>
                                     </MenuItem>
-                                    <MenuItem component={Link} to={PROFILE_ROUTE}>
+                                    <MenuItem onClick={handleClose} component={Link} to={PROFILE_ROUTE}>
                                         <Typography textAlign="center">Profile</Typography>
                                     </MenuItem>
-                                    <MenuItem component={Link} to={SETTINGS_ROUTE}>
+                                    <MenuItem onClick={handleClose} component={Link} to={SETTINGS_ROUTE}>
                                         <Typography textAlign="center">Settings</Typography>
                                     </MenuItem>
                                     <MenuItem onClick={logout} component={Link} to={HOME_ROUTE}>
