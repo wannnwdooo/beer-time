@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 
 export const ProfilePageWrapper = styled.div`
   justify-content: center;
@@ -8,5 +8,4 @@ export const ProfilePageWrapper = styled.div`
   min-height: 100vh;
   background: linear-gradient(to top, #b7cae8, #e2e6ee);
   background-size: cover;
-
-`
+`;

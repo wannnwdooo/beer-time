@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
-import loginCover from '../../IMG/loginCover.jpg'
+import styled from "@emotion/styled";
+import loginCover from "../../IMG/loginCover.jpg";
 
 export const LoginPageWrapper = styled.div`
   width: 100%;
@@ -11,4 +11,4 @@ export const LoginPageWrapper = styled.div`
   background: url(${loginCover}) no-repeat center center fixed;
   background-size: cover;
   color: #ffffff;
-`
+`;

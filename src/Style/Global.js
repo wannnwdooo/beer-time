@@ -1,4 +1,4 @@
-import { injectGlobal } from '@emotion/css'
+import { injectGlobal } from "@emotion/css";
 
 injectGlobal`
 * {
@@ -9,4 +9,4 @@ injectGlobal`
   font-weight: 400;
   font-stretch: 100%;
 }
-`
+`;

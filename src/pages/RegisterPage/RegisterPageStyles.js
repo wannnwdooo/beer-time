@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
-import registerCover from '../../IMG/registerCover.jpg'
+import styled from "@emotion/styled";
+import registerCover from "../../IMG/registerCover.jpg";
 
 export const RegisterPageWrapper = styled.div`
   width: 100%;
@@ -11,4 +11,4 @@ export const RegisterPageWrapper = styled.div`
   background: url(${registerCover}) no-repeat center center fixed;
   background-size: cover;
   color: #ffffff;
-`
+`;

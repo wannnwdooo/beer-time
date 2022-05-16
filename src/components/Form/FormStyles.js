@@ -1,5 +1,5 @@
 export const FormStyles = {
-    input: {
-        color: "white",
-    },
-}
+  input: {
+    color: "white",
+  },
+};

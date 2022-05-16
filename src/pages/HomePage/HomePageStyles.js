@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from '@emotion/styled'
-import homeCover from '../../IMG/homeCover.jpg'
+import React from "react";
+import styled from "@emotion/styled";
+import homeCover from "../../IMG/homeCover.jpg";
 
 export const HomePageWrapper = styled.div`
   width: 100%;
