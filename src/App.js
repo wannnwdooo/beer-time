@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import AppRouter from "./components/AppRouter/AppRouter";
 import Header from "./components/Header/Header";
 import { getAuth } from "firebase/auth";
@@ -16,12 +16,12 @@ function App() {
     return <Loader />;
   }
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ThemeProvider theme={theme}>
         <Header />
         <AppRouter />
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

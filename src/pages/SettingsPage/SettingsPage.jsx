@@ -32,7 +32,9 @@ const SettingsPage = () => {
   const [per, setPer] = useState(null);
 
   useEffect(() => {
-    fetchData(id, dispatch);
+    if (id !== undefined) {
+      fetchData(id, dispatch);
+    }
   }, []);
 
   useEffect(() => {

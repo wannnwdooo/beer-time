@@ -25,7 +25,9 @@ const ProfilePage = () => {
   };
 
   useEffect(() => {
-    fetchData(id, dispatch);
+    if (id !== undefined) {
+      fetchData(id, dispatch);
+    }
   }, []);
 
   return (
