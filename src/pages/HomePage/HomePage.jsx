@@ -20,7 +20,9 @@ const HomePage = () => {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    fetchData(id, dispatch);
+    if (id !== undefined) {
+      fetchData(id, dispatch);
+    }
   }, []);
 
   return (
