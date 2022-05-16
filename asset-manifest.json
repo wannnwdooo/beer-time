@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/beer-time/static/js/main.0558eaf9.js",
+    "main.js": "/beer-time/static/js/main.3e8231dc.js",
     "static/media/homeCover.jpg": "/beer-time/static/media/homeCover.757bc419b3e36914d828.jpg",
     "static/media/registerCover.jpg": "/beer-time/static/media/registerCover.d2ad73cf4b05b7d69c96.jpg",
     "static/media/brewdog-logo.png": "/beer-time/static/media/brewdog-logo.33d1981162262dd39fe1.png",
     "static/media/loginCover.jpg": "/beer-time/static/media/loginCover.5838292a609f716f0598.jpg",
     "index.html": "/beer-time/index.html",
-    "main.0558eaf9.js.map": "/beer-time/static/js/main.0558eaf9.js.map"
+    "main.3e8231dc.js.map": "/beer-time/static/js/main.3e8231dc.js.map"
   },
   "entrypoints": [
-    "static/js/main.0558eaf9.js"
+    "static/js/main.3e8231dc.js"
   ]
 }
